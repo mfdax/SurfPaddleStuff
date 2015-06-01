@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title><%= @title %></title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+   <!-- Optional theme -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+   <%=stylesheet_link_tag "application" %>
+   <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<<header style="background: url('<%= image_path 'waves2.jpg' %> ');
+background-repeat: no-repeat;
+background-size: cover;
+background: rgba($blue, 0.8) no-repeat center center fixed;
+background-attachment: fixed;
+max-width: 100%;
+max-height: 100%;
+">
+
+   <div class="overlay">
+
+      <div class='row no-gutter'>
+         <div class='col-md-6 hidden-sm text-center hidden-xs'>
+            <p><%= link_to "SURF & PADDLE CO. BLOG", root_path %></p>
+         </div>
+         <div class='col-md-6 col-xs-12'>
+            <ul class='list-unstyled list-inline text-center'>
+                <li><a href="#"> About &nbsp</a></li>
+                <li><a href="#"> Search <i class="glyphicon glyphicon-search"></a></i>
+
+               </ul>
+            </div>
+            <h1 class='text-center'>SURF & PADDLE CO.</h1>
+            <h2 class='text-center'>An Ironyard Academy Project Est. Fall 2013</h2>
+
+         </div>
+      </header>
+
+      <div class="container">
+
+         <div class="row no-gutter">
+            <div class="col-md-8 col-xs-12">
+
+               <content-left>
+                  <%=yield%>
+               </content-left>
+                  </div>
+
+                  <content-right>
+                     <div class="col-md-4 col-xs-12">
+                        <div class='right'>
+                           <div class='imgoverlay'>
+                              <%= image_tag("anne-marie-pic.png", :class => "img-responsive img-circle") %>
+                           </div>
+                           <h3 class='text-center'>Anne Marie</h3>
+                            <div class="text-center text-block">
+                            <a href="https://twitter.com/annemarie"><i id="social" class="fa fa-twitter-square fa-3x social-tw"></i></a>
+                            <a href="https://www.facebook.com/annemarie"><i id="social" class="fa fa-facebook-square fa-3x social-fb"></i></a>
+                            <a href="https://www.instagram.com/annemarie"><i id="social" class="fa fa-instagram fa-3x social-ig"></i></a>
+                            <a href="mailto:annemarie@yahoo.com"><i id="social" class="fa fa-envelope-square fa-3x social-em"></i></a>
+                           <%= image_tag("dog-no-arms.gif", :class => "img-responsive") %>
+                           <div class='hidden-xs'>
+                              <h1>SIDEBAR SECTION HEADING</h1>
+                              <p>Lorem ipsum dolor sit amet, vis vidisse docendi intellegam an, et per etiam iriure integre, ad vel zril vocent noluisse. Vide molestie disputando at quo, in adhuc minim eam. Iisque ponderum indoctum est at, aeque postea at has. Ius dicam inciderint cotidieque ex, cu harum essent convenire usu, rebum inani referrentur eam cu. Vel eu nihil volumus legendos.</p>
+                           </div>
+                           </div
+                        </content-right>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+               <footer>
+                  <div class='row no-gutter'>
+                     <h1 class='text-center'>MOST POPULAR POSTS</h1>
+                  </div>
+
+
+
+                  <div class='row no-gutter'>
+                     <%= render partial: "footer" %>
+                  </div>
+
+                  <div class='bottom'>
+                     <div class='col-md-6 col-xs-12 text-center'>
+                        <div class="logo" style="float:left;"> <img src="http://theironyard.com/images/footer-logo.png" style="preserveAspectRatio=MinYMin slice"> Copyright 2013. All Rights Reserved.</div>
+                     </div>
+
+<div class='col-md-6 col-xs-12 text-right' style='padding-right:40px; padding-top:30px'>
+                        <ul class='list-unstyled list-inline'>
+                            <li><a href="news.asp"> News |&nbsp</a></li>
+                            <li><a href="contact.asp"> Contact |&nbsp</a></li>
+                            <li><a href="about.asp"> About |&nbsp</a></li>
+                            <li><a href="default.asp">H-Minus</a></li>
+                        </div>
+                     </div>
+                  </footer>
+               </body>
+               </html>

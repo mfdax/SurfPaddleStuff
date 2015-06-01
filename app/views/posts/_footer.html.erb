@@ -1,0 +1,14 @@
+
+<% @posts.reverse.each do |post| %>
+   <div class='col-md-3 col-sm-4 col-xs-12'>
+     <%= link_to post_path(post.permalink) do %>
+      <div class="cage" style="background: url(<%= image_path post.image_name%>); background-position: 30%; width: 400px">
+         <div class="overlay">
+               <h1 class='text-right'>
+                  <%= post.permalink.gsub("-", ' ').upcase%>
+                </h1>
+          </div>
+      </div>
+      <% end %>
+   </div>
+ <% end %>
